@@ -200,12 +200,12 @@ li {
 	color: #111111;
 }
 
-.footer__newslatter form {
+.search {
 	text-align: center;
 	position: relative;
 }
 
-.footer__newslatter form input {
+.search input {
 	height: 40px;
     width: 100%;
     border: 1px solid #e1e1e1;
@@ -215,7 +215,7 @@ li {
     color: #666666;
 }
 
-.footer__newslatter form img {
+.search img {
 	position: absolute;
 	right: 4px;
 	top: 4px;
@@ -603,8 +603,6 @@ li {
 
 .nav {
 	border-bottom: none;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	position: relative;
 	margin-bottom: 40px;
@@ -615,7 +613,7 @@ li {
 	left: 0;
 	top: 13px;
 	height: 1px;
-	width: 300px;
+	width: 280px;
 	background: #e1e1e1;
 	content: "";
 }
@@ -625,39 +623,38 @@ li {
 	right: 0;
 	top: 13px;
 	height: 1px;
-	width: 300px;
+	width: 280px;
 	background: #e1e1e1;
 	content: "";
 }
 
 .nav-item {
 	margin-right: 46px;
+	color: #666666;
+	font-weight: 600;
 }
 
 .nav-item:last-child {
 	margin-right: 0;
 }
 
-.nav-item .nav-link {
-	font-size: 18px;
-	color: #666666;
-	font-weight: 600;
+.nav-item:hover {
 	border: none;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	color: #666666;
+}
+
+.nav-link {
+	border: none !important;
 	padding: 0;
 }
 
-.nav-item .nav-link.active {
-	color: #111111;
+.nav-link.active {
+	color: #111111 !important;
+	border: none;
 }
 
 .tab-content .tab-pane h6 {
 	color: #666666;
 	font-weight: 600;
 	margin-bottom: 24px;
-}
-
-.tab-content .tab-pane p:last-child {
-	margin-bottom: 0;
 }

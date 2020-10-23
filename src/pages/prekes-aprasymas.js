@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "gatsby"
 import Layout from '../components/Layout'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 import star from "../assets/star.svg"
 import necklace from '../assets/products/3/pexels-mídia-1454169.jpg'
 
@@ -77,43 +79,23 @@ const product = () => {
                         </div>
                         <div className="col-lg-12">
                             <div className="product__details__tab">
-                                <ul className="nav nav-tabs" role="tablist">
-                                    <li className="nav-item">
-                                        <a className="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Aprašymas</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Informacija</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Atsiliepimai ( 4 )</a>
-                                    </li>
-                                </ul>
-                                <div className="tab-content">
-                                    <div className="tab-pane active" id="tabs-1" role="tabpanel">
+                                <Tabs defaultActiveKey="description" className="nav">
+                                    <Tab tabClassName="nav-item" eventKey="description" title="Aprašymas">
                                         <h6>Aprašymas</h6>
                                         <p>Aliquam erat volutpat. Nulla facilisi. In nec porttitor dolor. Nullam ut hendrerit ligula, et scelerisque felis. Sed ornare diam nec tortor auctor, in porttitor lectus commodo. Sed consectetur nisi libero, aliquet faucibus ligula luctus quis. Aenean cursus dui vitae venenatis convallis. Sed gravida purus id blandit egestas. Donec mattis quam tincidunt velit mollis, et venenatis leo aliquam. Nullam luctus nisl eu nisi vestibulum, eget tempus ligula auctor. Phasellus egestas est ligula, et laoreet arcu dignissim id. </p>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                                        quis, sem.</p>
-                                    </div>
-                                    <div className="tab-pane" id="tabs-2" role="tabpanel">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                    </Tab>
+                                    <Tab tabClassName="nav-item" eventKey="information" title="Informacija">
                                         <h6>Informacija</h6>
                                         <p>Aliquam erat volutpat. Nulla facilisi. In nec porttitor dolor. Nullam ut hendrerit ligula, et scelerisque felis. Sed ornare diam nec tortor auctor, in porttitor lectus commodo. Sed consectetur nisi libero, aliquet faucibus ligula luctus quis. Aenean cursus dui vitae venenatis convallis. Sed gravida purus id blandit egestas. Donec mattis quam tincidunt velit mollis, et venenatis leo aliquam. Nullam luctus nisl eu nisi vestibulum, eget tempus ligula auctor. Phasellus egestas est ligula, et laoreet arcu dignissim id. </p>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                                        quis, sem.</p>
-                                    </div>
-                                    <div className="tab-pane" id="tabs-3" role="tabpanel">
-                                        <h6>Atsiliepimai ( 4 )</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                    </Tab>
+                                    <Tab tabClassName="nav-item" eventKey="reviews" title="Atsiliepimai (4)">
+                                        <h6>Atsiliepimai</h6>
                                         <p>Aliquam erat volutpat. Nulla facilisi. In nec porttitor dolor. Nullam ut hendrerit ligula, et scelerisque felis. Sed ornare diam nec tortor auctor, in porttitor lectus commodo. Sed consectetur nisi libero, aliquet faucibus ligula luctus quis. Aenean cursus dui vitae venenatis convallis. Sed gravida purus id blandit egestas. Donec mattis quam tincidunt velit mollis, et venenatis leo aliquam. Nullam luctus nisl eu nisi vestibulum, eget tempus ligula auctor. Phasellus egestas est ligula, et laoreet arcu dignissim id. </p>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                                        quis, sem.</p>
-                                    </div>
-                                </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                    </Tab>
+                                </Tabs>
                             </div>
                         </div>
                     </div>

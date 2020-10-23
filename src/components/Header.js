@@ -56,12 +56,10 @@ const Header = () => {
               </div>
               <ul className="header__right__widget">
                 <li>
-                    <div class="footer__newslatter">
-                      <form action="#">
-                        <input type="text" placeholder="Paieška" />
-                        <img src={search} className="icon_search" alt="Paieška" />
-                      </form>
-                    </div>
+                    <form action="#" className="search">
+                      <input type="text" placeholder="Paieška" />
+                      <img src={search} className="icon_search" alt="Paieška" />
+                    </form>
                 </li>
                 <li>
                   <Link className="text-link" to="#">
