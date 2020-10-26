@@ -35,7 +35,7 @@ const product = () => {
                                         <span>Kiekis:</span>
                                         <div className="pro-qty">
                                             <span className="dec qtybtn">-</span>
-                                            <input type="text" value="1" />
+                                            <input type="text" defaultValue="1" />
                                             <span className="inc qtybtn">+</span>
                                         </div>
                                     </div>
@@ -50,11 +50,11 @@ const product = () => {
                                         <li>
                                             <span>Galimos spalvos:</span>
                                             <div className="color__checkbox">
-                                                <label for="gold">
-                                                    <input type="radio" name="color__radio" id="gold" checked />
+                                                <label htmlFor="gold">
+                                                    <input type="radio" name="color__radio" id="gold" defaultChecked />
                                                     <span className="checkmark"></span>
                                                 </label>
-                                                <label for="silver">
+                                                <label htmlFor="silver">
                                                     <input type="radio" name="color__radio" id="silver" />
                                                     <span className="checkmark silver-bg"></span>
                                                 </label>
@@ -63,11 +63,11 @@ const product = () => {
                                         <li>
                                             <span>Galimi dydžiai:</span>
                                             <div className="size__btn">
-                                                <label for="s-btn" className="active">
+                                                <label htmlFor="s-btn" className="active">
                                                     <input type="radio" id="s-btn" />
                                                     s
                                                 </label>
-                                                <label for="m-btn">
+                                                <label htmlFor="m-btn">
                                                     <input type="radio" id="m-btn" />
                                                     m
                                                 </label>

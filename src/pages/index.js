@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "gatsby"
 import Layout from '../components/layout'
-import ProductSummary from '../components/ProductSummary'
+import ProductCard from '../components/ProductCard'
 
 export default class Home extends Component {
   getIndex() {
@@ -23,7 +23,7 @@ export default class Home extends Component {
                     Aenean cursus dui vitae venenatis convallis. Donec mattis quam tincidunt velit mollis, et venenatis leo aliquam.
                     </p>
                     <div className="global__button">
-                      <Link to="#" className="button">žiūrėti prekes</Link>
+                      <Link to="/visos-prekes" className="button">žiūrėti prekes</Link>
                     </div>
                   </div>
                 </div>
@@ -41,10 +41,10 @@ export default class Home extends Component {
               </div>
             </div>
             <div className="row">
-              <ProductSummary />
-              <ProductSummary />
-              <ProductSummary />
-              <ProductSummary />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
             </div>
             <div className="row">
               <div className="col-lg-4 col-md-4 pt-5">
@@ -54,10 +54,10 @@ export default class Home extends Component {
               </div>
             </div>
             <div className="row">
-              <ProductSummary />
-              <ProductSummary />
-              <ProductSummary />
-              <ProductSummary />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
             </div>
           </div>
         </section>

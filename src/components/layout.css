@@ -561,8 +561,6 @@ li {
 	height: 6px;
 	border: solid #ffffff;
 	border-width: 1.5px 1.5px 0px 0px;
-	-webkit-transform: rotate(127deg);
-	-ms-transform: rotate(127deg);
 	transform: rotate(127deg);
 	opacity: 0;
 	content: "";
