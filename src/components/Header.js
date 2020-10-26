@@ -25,23 +25,23 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-link" to="#">
+                  <Link className="text-link" to="/auskarai">
                     Auskarai
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-link" to="#">
+                  <Link className="text-link" to="/pakabukai">
                     Pakabukai
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-link" to="#">
+                  <Link className="text-link" to="/ziedai">
                     Žiedai
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-link" to="#">
-                    Apyrankės
+                  <Link className="text-link" to="/grandineles">
+                    Grandinėlės
                   </Link>
                 </li>
               </ul>

@@ -4,11 +4,6 @@ import Layout from '../components/layout'
 import ProductCard from '../components/ProductCard'
 
 export default class Home extends Component {
-  getIndex() {
-    let index = Math.floor(Math.random() * 19)
-    console.log(index)
-  }
-
   render() {
     return (
       <Layout>
