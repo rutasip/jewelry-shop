@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-md-2">
             <div className="header__logo">
               <Link className="text-link" to="/">
@@ -54,14 +54,10 @@ const Header = () => {
                   Apie Mus
                 </Link>
               </div>
-              <ul className="header__right__widget">
-                <li>
                     <form action="#" className="search">
                       <input type="text" placeholder="Paieška" />
                       <img src={search} className="icon_search" alt="Paieška" />
                     </form>
-                </li>
-                <li>
                   <Link className="text-link" to="#">
                     <img
                       src={cart}
@@ -69,8 +65,6 @@ const Header = () => {
                       alt="Pirkinių krepšelis"
                     />
                   </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
