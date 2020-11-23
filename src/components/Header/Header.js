@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from '../assets/logo.png'
-import search from "../assets/search.svg"
-import cart from "../assets/shopping-cart.svg"
+import "./Header.css"
+import logo from '../../assets/logo.png'
+import search from "../../assets/search.svg"
+import cart from "../../assets/shopping-cart.svg"
 
 const Header = () => {
   return (
@@ -47,21 +48,17 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 align-self-center">
             <div className="header__right">
               <div className="header__right__contacts">
                 <Link className="text-link" to="#">
                   Apie Mus
                 </Link>
               </div>
-              <ul className="header__right__widget">
-                <li>
                     <form action="#" className="search">
                       <input type="text" placeholder="Paieška" />
                       <img src={search} className="icon_search" alt="Paieška" />
                     </form>
-                </li>
-                <li>
                   <Link className="text-link" to="#">
                     <img
                       src={cart}
@@ -69,8 +66,6 @@ const Header = () => {
                       alt="Pirkinių krepšelis"
                     />
                   </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

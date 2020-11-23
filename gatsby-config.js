@@ -6,4 +6,5 @@
 
 module.exports = {
   pathPrefix: "/jewelry-shop",
+  plugins: [],
 }
