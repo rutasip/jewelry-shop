@@ -1,14 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from '../assets/logo.png'
-import search from "../assets/search.svg"
-import cart from "../assets/shopping-cart.svg"
+import "./Header.css"
+import logo from '../../assets/logo.png'
+import search from "../../assets/search.svg"
+import cart from "../../assets/shopping-cart.svg"
 
 const Header = () => {
   return (
     <header className="header">
       <div className="container-fluid">
-        <div className="row align-items-center">
+        <div className="row">
           <div className="col-md-2">
             <div className="header__logo">
               <Link className="text-link" to="/">
@@ -47,7 +48,7 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 align-self-center">
             <div className="header__right">
               <div className="header__right__contacts">
                 <Link className="text-link" to="#">
