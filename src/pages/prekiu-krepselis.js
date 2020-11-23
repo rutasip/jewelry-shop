@@ -9,17 +9,10 @@ export const Cart = () => (
             <section className="cart">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8">
+                        <div className="col-lg-7">
                             <h5>prekių krepšelis</h5>
                             <div className="cart__table">
                                 <table>
-                                    <thead>
-                                    <tr>
-                                        <th>Prekė</th>
-                                        <th>Kaina</th>
-                                        <th></th>
-                                    </tr>
-                                    </thead>
                                     <tbody>
                                         <tr>
                                             <td className="cart__item">

@@ -2,10 +2,34 @@ import React from 'react'
 import Layout from '../components/Layout'
 import "./uzsakymas.css"
 
+function sendOrderRequest() {
+    let allAreFilled = true;
+    document.getElementById("checkout").querySelectorAll("[required]").forEach(function(inputField) {
+        console.log("runs");
+        if (!inputField.value) allAreFilled = false;
+    })
+    if (!allAreFilled) {
+        document.getElementById("empty-fields-alert").style.display = "flex";
+        setTimeout(function() {
+            document.getElementById("empty-fields-alert").style.display = "none";
+        }, 2000)
+    } else {
+        document.getElementById("order-sent").style.display = "flex";
+        setTimeout(function() {
+            document.getElementById("order-sent").style.display = "none";
+            localStorage.removeItem('id');
+            localStorage.removeItem('img');
+            localStorage.removeItem('name');
+            localStorage.removeItem('price');
+            window.location.replace("/");
+        }, 2000)
+    }
+}
+
 export const Cart = () => (
     (localStorage.getItem('id') !== null) ? (
         <Layout>
-            <section className="checkout">
+            <section id="checkout">
                 <div className="container">
                     <form action="#" className="checkout__form">
                         <div className="row">
@@ -15,43 +39,43 @@ export const Cart = () => (
                                 <div className="col-lg-6 col-md-6 col-sm-6">
                                     <div className="checkout__form__input">
                                         <p>Vardas <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6">
                                     <div className="checkout__form__input">
                                         <p>Pavardė <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="checkout__form__input">
                                         <p>Šalis <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                     <div className="checkout__form__input">
                                         <p>Miestas <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                     <div className="checkout__form__input">
                                         <p>Adresas <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                     <div className="checkout__form__input">
                                         <p>Pašto kodas <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6">
                                     <div className="checkout__form__input">
                                         <p>Tel. nr. <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6">
                                     <div className="checkout__form__input">
                                         <p>El. paštas <span>*</span></p>
-                                        <input type="text" />
+                                        <input type="text" required />
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
@@ -126,7 +150,13 @@ export const Cart = () => (
                                             <li>Iš viso <span>{localStorage.getItem('price')} €</span></li>
                                         </ul>
                                     </div>
-                                    <a href="#" className="theme-button">Užsakyti</a>
+                                    <a href="#" className="theme-button" onClick={sendOrderRequest}>Užsakyti</a>
+                                    <div className="alert alert-success" id="order-sent" role="alert">
+                                        Užsakymas išsiųstas!
+                                    </div>
+                                    <div className="alert alert-warning" id="empty-fields-alert" role="alert">
+                                        Užpildykite būtinus laukelius
+                                    </div>
                                 </div>
                             </div>
                         </div>

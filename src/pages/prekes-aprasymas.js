@@ -20,10 +20,22 @@ export const data = {
 class Product extends React.Component {
     render() {
         function addProductToCart() {
-            localStorage.setItem('id', data.products[0].id);
-            localStorage.setItem('img', data.products[0].img);
-            localStorage.setItem('name', data.products[0].name);
-            localStorage.setItem('price', data.products[0].price);
+            if (localStorage.getItem('id') !== null) {
+                document.getElementById("product-already-added").style.display = "flex";
+                setTimeout(function() {
+                    document.getElementById("product-already-added").style.display = "none";
+                }, 2000)
+            } else {
+                localStorage.setItem('id', data.products[0].id);
+                localStorage.setItem('img', data.products[0].img);
+                localStorage.setItem('name', data.products[0].name);
+                localStorage.setItem('price', data.products[0].price);
+    
+                document.getElementById("product-added").style.display = "flex";
+                setTimeout(function() {
+                    document.getElementById("product-added").style.display = "none";
+                }, 2000)
+            }
         }
         return (
             <Layout>
@@ -49,6 +61,12 @@ class Product extends React.Component {
                                     <div className="product__details__price">{data.products[0].price} €</div>
                                     <p>{data.products[0].description}</p>
                                     <a href="#" onClick={addProductToCart} className="theme-button"> Į krepšelį</a>
+                                    <div className="alert alert-success" id="product-added" role="alert">
+                                        Prekė pridėta į krepšelį!
+                                    </div>
+                                    <div className="alert alert-warning" id="product-already-added" role="alert">
+                                        Prekė jau yra krepšelyje
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-lg-12">
