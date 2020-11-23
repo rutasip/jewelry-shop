@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
 /* Global */
 
 html,
 body {
   height: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -15,8 +18,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-a {
+p {
   margin: 0;
 }
 
@@ -68,7 +70,8 @@ input:focus,
 select:focus,
 textarea:focus,
 .text-link:hover,
-.text-link:focus {
+.text-link:focus,
+.theme-button:hover {
   text-decoration: none;
   outline: none;
 }
@@ -93,23 +96,19 @@ img {
   background-position: top center;
 }
 
-.global__button {
-  overflow: hidden;
-  margin-bottom: 25px;
-}
-
-.global__button .button {
-  display: inline-block;
+.theme-button {
   font-size: 14px;
   color: #ffffff;
   background: #ca1515;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 14px 30px 15px;
+  padding: 12px 30px;
   border-radius: 50px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-decoration: none;
+  display: inline-block;
+}
+
+.theme-button:hover {
+  color: #ffffff;
 }
 
 /* Hero */
@@ -124,19 +123,19 @@ img {
   display: flex;
   position: relative;
   align-items: center;
-  background-image: url("../assets/landing.png");
+  background-image: url("../assets/landing-cropped.png");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
-  background-size: 450px;
+  background-size: 360px;
 }
 
 .hero__text {
-  max-width: 480px;
+  max-width: 470px;
 }
 
 .hero__text h1 {
-  font-family: "Euphoria Script", cursive;
+  font-family: "Cookie", cursive;
   color: #111111;
   margin-bottom: 10px;
 }
@@ -192,7 +191,7 @@ img {
   padding-top: 22px;
 }
 
-.product__item__text h6 .text-link {
+.product__item__text h6 {
   font-size: 14px;
   color: #111111;
 }
@@ -251,7 +250,7 @@ img {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .footer__social-links a:last-child {
@@ -270,7 +269,7 @@ img {
 }
 
 .product__details__image img {
-  max-height: 620px;
+  max-height: 580px;
 }
 
 .product__details__text h3 {
@@ -294,6 +293,10 @@ img {
   font-size: 12px;
   color: #666666;
   margin-left: 5px;
+}
+
+.product__details__text p {
+  padding-bottom: 30px;
 }
 
 .product__details__price {

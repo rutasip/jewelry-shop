@@ -59,7 +59,7 @@ const Header = () => {
                       <input type="text" placeholder="Paieška" />
                       <img src={search} className="icon_search" alt="Paieška" />
                     </form>
-                  <Link className="text-link" to="#">
+                  <Link className="text-link" to="/prekiu-krepselis">
                     <img
                       src={cart}
                       className="icon_cart_alt"

@@ -17,9 +17,7 @@ export default class Home extends Component {
                     <p>
                     Aenean cursus dui vitae venenatis convallis. Donec mattis quam tincidunt velit mollis, et venenatis leo aliquam.
                     </p>
-                    <div className="global__button">
-                      <Link to="/visos-prekes" className="button">žiūrėti prekes</Link>
-                    </div>
+                    <Link to="/visos-prekes" className="theme-button">žiūrėti prekes</Link>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,52 @@
+.cart {
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.cart h5 {
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.cart__table {
+  margin-bottom: 30px;
+}
+
+.cart__table thead th {
+  font-size: 18px;
+  color: #111111;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.cart__item {
+  width: 585px;
+  padding: 10px 0;
+}
+
+.cart__item img {
+  object-fit: cover;
+  object-position: center;
+  height: 70px;
+  width: 70px;
+  float: left;
+  margin-right: 25px;
+}
+
+.cart__item__title {
+  padding-top: 23px;
+}
+
+.cart__item__title h6 {
+  font-weight: 500;
+}
+
+.cart__item__price {
+  font-weight: 500;
+  vertical-align: top;
+  padding-top: 33px;
+}
