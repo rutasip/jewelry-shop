@@ -12,7 +12,7 @@ function sendOrderRequest() {
         document.getElementById("empty-fields-alert").style.display = "flex";
         setTimeout(function() {
             document.getElementById("empty-fields-alert").style.display = "none";
-        }, 2000)
+        }, 1000)
     } else {
         document.getElementById("order-sent").style.display = "flex";
         setTimeout(function() {
@@ -22,12 +22,12 @@ function sendOrderRequest() {
             localStorage.removeItem('name');
             localStorage.removeItem('price');
             window.location.replace("/");
-        }, 2000)
+        }, 1000)
     }
 }
 
-export const Cart = () => (
-    (localStorage.getItem('id') !== null) ? (
+export const Order = () => (
+    (typeof window !== 'undefined' && localStorage.getItem('id') !== null) ? (
         <Layout>
             <section id="checkout">
                 <div className="container">
@@ -177,4 +177,4 @@ export const Cart = () => (
     )
 )
 
-export default Cart
+export default Order

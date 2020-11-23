@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import "./prekiu-krepselis.css"
 
 export const Cart = () => (
-    (localStorage.getItem('id') !== null) ? (
+    (typeof window !== 'undefined' && localStorage.getItem('id') !== null) ? (
         <Layout>
             <section className="cart">
                 <div className="container">

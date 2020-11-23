@@ -24,7 +24,7 @@ class Product extends React.Component {
                 document.getElementById("product-already-added").style.display = "flex";
                 setTimeout(function() {
                     document.getElementById("product-already-added").style.display = "none";
-                }, 2000)
+                }, 1000)
             } else {
                 localStorage.setItem('id', data.products[0].id);
                 localStorage.setItem('img', data.products[0].img);
@@ -34,7 +34,7 @@ class Product extends React.Component {
                 document.getElementById("product-added").style.display = "flex";
                 setTimeout(function() {
                     document.getElementById("product-added").style.display = "none";
-                }, 2000)
+                }, 1000);
             }
         }
         return (
