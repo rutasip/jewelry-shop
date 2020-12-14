@@ -1,9 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import "./Header.css"
-import logo from '../../assets/logo.png'
-import search from "../../assets/search.svg"
-import cart from "../../assets/shopping-cart.svg"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -13,7 +10,7 @@ const Header = () => {
           <div className="col-md-2">
             <div className="header__logo">
               <Link className="text-link" to="/">
-                <img src={logo} alt="Logo" />
+                <img src="/images/logo.png" alt="Logo" />
               </Link>
             </div>
           </div>
@@ -51,27 +48,31 @@ const Header = () => {
           <div className="col-md-4 align-self-center">
             <div className="header__right">
               <div className="header__right__contacts">
-                <Link className="text-link" to="#">
-                  Apie Mus
+                <Link className="text-link" to="/kontaktai">
+                  Kontaktai
                 </Link>
               </div>
-                    <form action="#" className="search">
-                      <input type="text" placeholder="Paieška" />
-                      <img src={search} className="icon_search" alt="Paieška" />
-                    </form>
-                  <Link className="text-link" to="/prekiu-krepselis">
-                    <img
-                      src={cart}
-                      className="icon_cart_alt"
-                      alt="Pirkinių krepšelis"
-                    />
-                  </Link>
+              <form action="#" className="search">
+                <input type="text" placeholder="Paieška" />
+                <img
+                  src="/images/search.svg"
+                  className="icon_search"
+                  alt="Paieška"
+                />
+              </form>
+              <Link to="/krepselis" className="text-link">
+                <img
+                  src="/images/shopping-cart.svg"
+                  className="icon_cart_alt"
+                  alt="Pirkinių krepšelis"
+                />
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
